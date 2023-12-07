@@ -11,7 +11,17 @@ fn load_input(name: &str) {
     let reader = BufReader::new(file);
 }
 
-#[test]
-fn example() {
-    let input = load_input("example");
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn part_1() {
+        let input = load_input("example");
+    }
+
+    #[test]
+    fn part_2() {
+        let input = load_input("example");
+    }
 }
