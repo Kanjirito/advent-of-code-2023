@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn load_input(name: &str) {
-    let file = File::open(name).expect("No input file found");
+    let file = File::open(name).unwrap_or_else(|_| panic!("No \"{}\" file found", name));
     let reader = BufReader::new(file);
 }
 
